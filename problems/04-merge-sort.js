@@ -5,7 +5,10 @@ function merge(array1, array2) {
   let result = []
 
   while (array1.length !== 0 || array2.length !== 0) {
-    if (array1[0] > array2[0]) {
+    let val1 = array1.length ? array1[0] : Infinity
+    let val2 = array2.length ? array2[0] : Infinity
+
+    if (val1 > val2) {
       result.push(array2.shift())
     } else {
       result.push(array1.shift())
@@ -24,7 +27,7 @@ function merge(array1, array2) {
 
 function mergeSort(array) {
   // your code here
-  if(array.length === 1) {
+  if(array.length <= 1) {
     return array
   }
   let mid = (Math.floor(array.length / 2))
