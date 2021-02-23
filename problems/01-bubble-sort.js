@@ -24,12 +24,16 @@ function bubbleSort(array) {
       for(let i = 0; i < array.length - 1; i++) {
         if(array[i] > array[i + 1]) {
           swapsies(array, i, i + 1)
+          swapped = true;
         }
       }
+    }
+    if (swapped === false) {
+      return array;
     }
 }
 
 module.exports = {
   bubbleSort,
-  swap
+  swapsies
 };
