@@ -6,6 +6,11 @@ function merge(array1, array2) {
 
 function mergeSort(array) {
   // your code here
+  if(array.length === 1) {
+    return array
+  }
+
+  let lefty = 
 }
 
 module.exports = {
